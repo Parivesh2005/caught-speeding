@@ -16,10 +16,10 @@ function determineBtnClicked() {
 
   // Process & Output
   if (driverSpeed >= speedLimit + 20) {
-    outputSpan.innerHTML = "BIG TICKET";
+    return outputSpan.innerHTML = "BIG TICKET";
   } else if (driverSpeed > speedLimit) {
-    outputSpan.innerHTML = "SMALL TICKET";
+    return outputSpan.innerHTML = "SMALL TICKET";
   } else {
-    outputSpan.innerHTML = "NO TICKET";
+    return outputSpan.innerHTML = "NO TICKET";
   }
 }
