@@ -7,14 +7,16 @@ let speedLimitInput = document.getElementById("speed-limit");
 let outputSpan = document.getElementById("output");
 
 // Add Event Listener to Calculate Button
-determineBtn.addEventListener("click", determineBtnClicked);
+determineBtn.addEventListener("click", determineBtnClicked, determineTicket);
 
+ // Input & Output
 function determineBtnClicked() {
-  // Input
   let driverSpeed = +driverSpeedInput.value;
   let speedLimit = +speedLimitInput.value;
-
-  // Process & Output
+  determineTicket(driverSpeed, speedLimit);
+}
+  // Process
+function determineTicket(driverSpeed, speedLimit){
   if (driverSpeed >= speedLimit + 20) {
     return outputSpan.innerHTML = "BIG TICKET";
   } else if (driverSpeed > speedLimit) {
